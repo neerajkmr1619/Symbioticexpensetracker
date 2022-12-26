@@ -1,6 +1,10 @@
 <script>
 	import '../app.postcss';
+	import { page } from '$app/stores';
 	import Header from './Components/header.svelte';
+	//console.log($page)
+	$: currentPage = $page.route.id;
+	
 </script>
 
 <Header/>
@@ -17,12 +21,18 @@
 	  <label for="my-drawer-2" class="drawer-overlay"></label> 
 	  <ul class="menu p-4 w-80 bg-base-300 text-base-content">
 		<!-- Sidebar content here -->
-		<li><a href = "/">Dashboard</a></li>
-		<li><a href = "/Submit">Submit</a></li>
-		<li><a href = "/View">View</a></li>
+		<li><a class:active = {currentPage === "/"} href = "/" >Dashboard</a></li>
+		<li><a class:active = {currentPage === "/Submit"} href = "/Submit" >Submit</a></li>
+		<li><a class:active = {currentPage === "/View"} href = "/View">View</a></li>
+		
 	  </ul>
 	
 	</div>
   </div>
 
+  <style>
+	.active {
+		background-color: primary
+	}
+  </style>
 

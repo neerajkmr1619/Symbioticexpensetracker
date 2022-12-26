@@ -1,6 +1,6 @@
 <div class="navbar bg-base-100">
     <div class="flex-1">
-      <a class="btn btn-ghost normal-case text-xl">Expense Tracker</a>
+      <a href = "/" class="btn btn-ghost normal-case text-xl">Expense Tracker</a>
     </div>
     <div class="flex-none">
       <button class="btn btn-square btn-ghost">
