@@ -42,7 +42,7 @@
         </tr>
       </thead>
       <tbody>
-        {#each dashboadItems as {id,title,description,price}}        
+        {#each dashboadItems.filter( x => x.title.startsWith(name)) as {id,title,description,price}}        
         <!-- rows -->
         <tr class="hover" on:click|preventDefault={()=>viewItem({id})}>
           <th>{id}</th>
