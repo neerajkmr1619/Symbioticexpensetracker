@@ -2,8 +2,16 @@
 	import '../app.postcss';
 	import { page } from '$app/stores';
 	import Header from './Components/header.svelte';
+
+	import { productsData } from '../Store';
 	//console.log($page)
+	export let data;
 	$: currentPage = $page.route.id;
+
+	const {products} = data;
+    console.log(products);
+    //setting store
+    productsData.set(products);
 	
 </script>
 
