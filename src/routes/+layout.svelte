@@ -4,6 +4,7 @@
 	import Header from './Components/header.svelte';
 
 	import { productsData } from '../Store';
+	import Footer from './Components/footer.svelte';
 	//console.log($page)
 	export let data;
 	$: currentPage = $page.route.id;
@@ -43,4 +44,6 @@
 		background-color: primary
 	}
   </style>
+
+  <Footer/>
 
